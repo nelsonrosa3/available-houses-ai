@@ -1,0 +1,144 @@
+﻿Extract house information from html and return the information in JSON format.
+
+#example
+
+HTML:
+
+<div class="dv-classified-row dv-classified-row-v2">
+    <table cellpadding="0" cellspacing="0">
+        <tbody><tr>
+            <td valign="top">
+                <table class="tbl-main-photo" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        <td align="center">
+                            <div>
+                                <div>
+                                    
+                                    <a href="/REFSMultipleSellers.asp?ID=4755934">
+                                        <span>1 Fotos</span>
+                                    </a>
+                                    
+                                </div>
+                                
+                                <a href="/REFSMultipleSellers.asp?ID=4755934"><img src="https://imgcache.clasificadosonline.com//PP/FS/2023/7/20/07202023064854cz45zc1a.jpg" alt="Apt. 4  Bldg. 7 El Comandante Walk-Ups" border="0"></a>
+                                
+                            </div>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+            <td valign="top">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <!-- Start: Title row -->
+                    <tbody><tr>
+                        <td valign="top" align="left" colspan="3">
+                            
+                            <a href="/REFSMultipleSellers.asp?ID=4755934">
+                            <div class="custom-wrap-text"><span class="link-blue-color">Apt. 4  Bldg. 7 El Comandante Walk-Ups</span></div>
+                            </a>
+                            
+                        </td>
+                    </tr>
+                    <!--  End: Title row  -->
+                    <tr>
+                        <td width="70%">
+                            <div style="width: 100%; display: inline-block">
+                                <span>
+                                    <!-- Bedrooms -->
+                                    3 Cuartos
+                                    
+                                    | 
+                                    
+                                    <!-- Bathrooms -->
+                                    2 Baños
+                                    
+                                </span>
+                            </div>
+                            <div style="width: 100%; display: inline-block; margin-top: 2%">
+                                
+                                <span class="Ver14nounder" style="color:#424141f2 !important">
+                                    <a href="/UDRealEstateDetail.asp?ID=4755934"></a>
+                                </span>
+                                <span>
+                                    <font face="Verdana, Arial, Helvetica, sans-serif" style="color:#424141f2 !important; font-weight: bold;">$67,000</font>							
+                                </span>
+                                <span class="Ver14nounder">
+                                    <a href="/UDRealEstateDetail.asp?ID=4755934" class="Ver14nounder"></a>
+                                    
+                                    <a href="/UDRealEstateDetail.asp?ID=4755934" class="Ver14nounder"></a>
+                                </span>
+                                
+                                <!-- Category -->
+                                <span>, Casa</span>
+                                <span>Repo</span>																					
+                                <span></span>
+                            </div>
+                        </td>
+                        <td width="23%">
+                            
+                            <a href="/REFSMultipleSellers.asp?ID=4755934" target="_blank">
+                                <p style="font-size: 14px; color: #666666; text-align: center">Multiples<br>Vendedores</p>
+                            </a>
+                            
+                        </td>
+                        <td width="7%">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <a href="UDREListingCOBarrio.asp?ID=3179">
+                                <span style="color: blue !important;">Condominio-El Comandante Apartments </span>
+                            </a>
+                            <span>, </span>
+                            <a href="https://www.clasificadosonline.com/UDREListing.asp?RESPueblos=San Juan - Río Piedras">
+                                <span style="color: blue !important;">San Juan - Río Piedras</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <!-- Start: Add/remove to favorites -->
+                            
+                            <div class="dv-fav-img-container" onclick="javascript: FavoriteIngest(0, 10768, 4755934, 0, 70, 3179, 67000, 1, 2, 10); SetFavorite(4755934, 0);">
+                            
+                                <img id="imgFavHidden" src="https://imgcache.clasificadosonline.com/UDClasMedia/Arte/corazon_vacio_col.png" alt="anadir favorito" title="Add to Favorites" border="0" style="width: 30px; height: 27px">
+                                
+                            </div>
+                            <!--  End: Add/remove to favorites  -->
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+    <!-- Set hidden fields for Tomtom map -->
+    <input type="hidden" class="Lat" value="18.403081">
+    <input type="hidden" class="Lon" value="-65.994251">
+    <input type="hidden" class="DetailUrl" value="https://www.clasificadosonline.com/UDRealEstateDetail.asp?ID=4755934">
+    <input type="hidden" class="Price" value="$67k">
+    <input type="hidden" class="BarrioCond" value="El Comandante Apartments">
+    </div>
+
+JSON:
+
+{
+    "title" : "Apt. 4  Bldg. 7 El Comandante Walk-Ups",
+    "rooms" : 3,
+    "bathrooms" : 2,
+    "price" : "$67,000",
+    "type" : "Casa",
+    "IsRepo" : true,
+    "IsOptioned" : false,
+    "town" : "San Juan - Río Piedras",
+    "location" : "Condominio-El Comandante Apartments",
+    "url" : "https://www.clasificadosonline.com/UDRealEstateDetail.asp?ID=4755934",
+    "id" : 4755934,
+    "latitude" : 18.403081,
+    "longitude" : -65.994251
+}
+
+
+HTML: 
+
+{{$househtml}}
+
+JSON:
